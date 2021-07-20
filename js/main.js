@@ -25,44 +25,44 @@ $(document).ready(function() {
         });
     });
 
-    const elSelectCustom = document.getElementsByClassName("js-selectCustom")[0];
-    const elSelectCustomValue = elSelectCustom.children[0];
-    const elSelectCustomOptions = elSelectCustom.children[1];
-    const defaultLabel = elSelectCustomValue.getAttribute("data-value");
+    // const elSelectCustom = document.getElementsByClassName("js-selectCustom")[0];
+    // const elSelectCustomValue = elSelectCustom.children[0];
+    // const elSelectCustomOptions = elSelectCustom.children[1];
+    // const defaultLabel = elSelectCustomValue.getAttribute("data-value");
 
-    // Listen for each custom option click
-    Array.from(elSelectCustomOptions.children).forEach(function (elOption) {
-        elOption.addEventListener("click", e => {
-            // Update custom select text too
-            elSelectCustomValue.textContent = e.target.textContent;
-            // Close select
-            elSelectCustom.classList.remove("isActive");
+    // // Listen for each custom option click
+    // Array.from(elSelectCustomOptions.children).forEach(function (elOption) {
+    //     elOption.addEventListener("click", e => {
+    //         // Update custom select text too
+    //         elSelectCustomValue.textContent = e.target.textContent;
+    //         // Close select
+    //         elSelectCustom.classList.remove("isActive");
 
-            if ($('.selectCustom-trigger').text() == 'Тверь') {
-                $('.popup__address').text('УЛ. ВОССТАНИЯ ДЕСЕПТИКОНОВ,6 13:00');
-                $('input[name="city"]').val('Тверь');
-            } else if ($('.selectCustom-trigger').text() == 'Торжок') {
-                $('.popup__address').text('УЛ. Пушкина,10 18:00');
-                $('input[name="city"]').val('Торжок');
-            } else if ($('.selectCustom-trigger').text() == 'Лихославль') {
-                $('.popup__address').text('УЛ. Ленина,3 10:00');
-                $('input[name="city"]').val('Лихославль');
-            }
-        });
-    });
+    //         if ($('.selectCustom-trigger').text() == 'Тверь') {
+    //             $('.popup__address').text('УЛ. ВОССТАНИЯ ДЕСЕПТИКОНОВ,6 13:00');
+    //             $('input[name="city"]').val('Тверь');
+    //         } else if ($('.selectCustom-trigger').text() == 'Торжок') {
+    //             $('.popup__address').text('УЛ. Пушкина,10 18:00');
+    //             $('input[name="city"]').val('Торжок');
+    //         } else if ($('.selectCustom-trigger').text() == 'Лихославль') {
+    //             $('.popup__address').text('УЛ. Ленина,3 10:00');
+    //             $('input[name="city"]').val('Лихославль');
+    //         }
+    //     });
+    // });
 
     // Toggle select on label click
-    elSelectCustomValue.addEventListener("click", e => {
-    elSelectCustom.classList.toggle("isActive");
-    });
+    // elSelectCustomValue.addEventListener("click", e => {
+    //     elSelectCustom.classList.toggle("isActive");
+    // });
 
     // close the custom select when clicking outside.
-    document.addEventListener("click", e => {
-    const didClickedOutside = !elSelectCustom.contains(event.target);
-    if (didClickedOutside) {
-        elSelectCustom.classList.remove("isActive");
-    }
-    });
+    // document.addEventListener("click", e => {
+    // const didClickedOutside = !elSelectCustom.contains(event.target);
+    // if (didClickedOutside) {
+    //     elSelectCustom.classList.remove("isActive");
+    // }
+    // });
 
     $(document).ready(function() {   
         $('.js-modal').click(function(e) {

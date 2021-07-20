@@ -11,6 +11,7 @@ if((isset($_POST['name']) && $_POST['name']!="") && (isset($_POST['phone']) && $
                     <body>
                         <p>Имя: '.$_POST['name'].'</p>
                         <p>Телефон: '.$_POST['phone'].'</p> 
+                        <p>E-mail: '.$_POST['email'].'</p> 
                         <p>Город: '.$_POST['city'].'</p>                      
                     </body>
                 </html>'; //Текст нащего сообщения можно использовать HTML теги
