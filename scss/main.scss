@@ -123,10 +123,6 @@ html, body {
         padding: 15px;
         padding-right: 15px;
 
-        @media (min-width: 576px) {
-            padding-right: 150px;
-        }
-
         @media (min-width: 768px) {
             padding: 20px;
             padding-right: 220px;
@@ -138,7 +134,7 @@ html, body {
     }
 
     &__text {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         font-size: 16px;
         line-height: 1;
         font-weight: 500;
@@ -148,12 +144,13 @@ html, body {
         }
 
         @media (min-width: 992px) {
-            font-size: 20px;
+            font-size: 24px;
+            margin-bottom: 30px;
         }
     }
 
     &__signature {
-        font-weight: 300;
+        font-weight: 400;
         font-size: 14px;
         display: flex;
         align-items: flex-start;
@@ -196,12 +193,12 @@ html, body {
         @media (min-width: 576px) {
             width: 300px;
             right: -17%;
-            display: inline-block;
         }
 
         @media (min-width: 768px) {
             width: 400px;
             right: -20%;
+            display: inline-block;
         }
 
         @media (min-width: 992px) {
@@ -393,9 +390,11 @@ html, body {
         &-info {
             font-size: 16px;
             line-height: 1.2;
+            color: yellow;
+            font-weight: 700;
 
             @media (min-width: 992px) {
-                font-size: 18px;
+                font-size: 22px;
             }
         }
     }
@@ -523,7 +522,7 @@ html, body {
 
         &-item {
             font-size: 16px;
-            font-weight: 200;
+            font-weight: 500;
             line-height: 1.2;
             margin-bottom: 5px;
 
@@ -692,7 +691,7 @@ html, body {
         }
     }
 
-    &--1, &--2 {
+    &--1, &--2, &--3 {
         position: relative;
 
         &:after {
@@ -710,18 +709,38 @@ html, body {
             border-radius: 50px;
 
             @media (min-width: 576px) {
+                content: "Шаг 1";
                 left: -25px;
-                font-size: 39px;
+                font-size: 14px;
                 width: 50px;
                 height: 50px;
             }
+
+            @media (min-width: 992px) {
+                left: -45px;
+                font-size: 24px;
+                width: 90px;
+                height: 90px;
+            }
+        }
+    }
+
+    &--1 {
+
+        @media (min-width: 768px) {
+            padding-left: 60px !important;
         }
     }
 
     &--2 {
 
         &:after {
-            content: "2";
+
+            content: '2';
+
+            @media (min-width: 576px) {
+                content: "Шаг 2";
+            }
         }
     }
     
@@ -731,16 +750,16 @@ html, body {
 
     &__title {
         font-weight: 800;
-        font-size: 22px;
+        font-size: 20px;
         text-transform: uppercase;
         line-height: 1.2;
 
         @media (min-width: 992px) {
-            font-size: 36px;
+            font-size: 30px;
         }
 
         & span {
-            color: #D71707;
+            color: #009529;
         }
     }
 
@@ -752,20 +771,139 @@ html, body {
         line-height: 1.2;
 
         @media (min-width: 992px) {
-            font-size: 32px;
+            font-size: 28px;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (min-width: 768px) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__counter {
+        height: 100%;
+        background: rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 14px;
+        color: #fff;
+        padding: 10px 20px;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            width: 35%;
+        }
+
+        @media (min-width: 992px) {
+            padding: 15px 30px;
+        }
+
+        &-number {
+            opacity: 0;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 6px;
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            padding: 0 30px;
+            margin-top: 10px;
+            position: relative;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media (min-width: 576px) {
+                font-size: 28px;
+                letter-spacing: 6px;
+            }
+
+            @media (min-width: 768px) {
+                font-size: 34px;
+                letter-spacing: 8px;
+                width: initial;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @media (min-width: 992px) {
+                font-size: 45px;
+                letter-spacing: 10px;
+            }
+
+            @media (min-width: 1200px) {
+                font-size: 65px;
+                letter-spacing: 15px;
+            }
+        }
+
+        &-text {
+            font-size: 18px;
+            text-transform: uppercase;
+            line-height: 1;
+            font-weight: 600;
+        }
+
+        &-count {
+            margin-top: 15px;
+
+            & span {
+                font-size: 65px;
+                font-weight: 700;
+                background: rgba(0, 0, 0, 0.75);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+                padding: 0 5px;
+                margin-top: -5px;
+                line-height: 1;
+                height: 100%;
+                display: inline-block;
+                margin-right: 7px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
         }
     }
 
     &__pretitle {
         font-size: 18px;
         text-transform: uppercase;
+        font-weight: 700;
+        color: #009529;
+        border: 1px dashed #009529;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 3px;
+        width: 100%;
+        margin-bottom: 15px;
+
+        @media (min-width: 768px) {
+            padding: 0 74px;
+            width: initial;
+            margin-bottom: 0;
+        }
 
         @media (min-width: 992px) {
             font-size: 36px;
+            padding: 0 20px;
+        }
+
+        @media (min-width: 1200px) {
+            padding: 0 70px;
         }
 
         & b {
             font-weight: 700;
+            color: #000;
+            padding-left: 7px;
         }
     }
 
@@ -820,7 +958,7 @@ html, body {
     }
 
     &__text {
-        font-weight: 300;
+        font-weight: 400;
         font-size: 16px;
         line-height: 1.2;
         text-align: center;
@@ -894,7 +1032,7 @@ html, body {
 
     &__btn {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 13px;
         color: #fff;
         padding: 6px 10px;
         background-color: #FE1D3D;
@@ -904,6 +1042,26 @@ html, body {
         display: inline-block;
         position: relative;
         transition: .3s;
+        position: relative;
+
+        &.vip--3:after {
+            color: #000;
+            content: '3';
+            top: calc(50% - 15px);
+            left: -35px;
+
+            @media (min-width: 576px) {
+                content: "Шаг 3";
+                top: calc(50% - 25px);
+                left: -70px;
+            }
+
+            @media (min-width: 992px) {
+                content: "Шаг 3";
+                top: calc(50% - 45px);
+                left: -120px;
+            }
+        }
 
         &:hover {
             background-color: #ce1731;
@@ -914,6 +1072,7 @@ html, body {
         @media (min-width: 576px) {
             letter-spacing: 1px;
             font-size: 18px;
+            font-size: 16px;
         }
 
         @media (min-width: 992px) {
@@ -1015,6 +1174,11 @@ html, body {
 }
 
 .footer {
+
+    &__privacy {
+        text-decoration: underline;
+        font-size: 14px;
+    }
 
     &__desc {
         font-size: 18px;
@@ -1232,6 +1396,7 @@ html, body {
   /* для элемента label, связанного с .custom-checkbox */
   .custom-checkbox+label {
     display: inline-flex;
+    flex-wrap: wrap;
     align-items: center;
     cursor: pointer;
     user-select: none;
@@ -1275,9 +1440,13 @@ html, body {
     cursor: pointer;
 
     & a {
-        padding-left: 5px;
         color: #000;
         text-decoration: underline;
+        padding-left: 18px;
+
+        @media (min-width: 576px) {
+            padding-left: 25px;
+        }
 
         &:hover {
             color: #000;

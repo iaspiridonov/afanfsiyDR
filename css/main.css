@@ -137,12 +137,6 @@ html, body {
   padding-right: 15px;
 }
 
-@media (min-width: 576px) {
-  .first__wrapper {
-    padding-right: 150px;
-  }
-}
-
 @media (min-width: 768px) {
   .first__wrapper {
     padding: 20px;
@@ -157,7 +151,7 @@ html, body {
 }
 
 .first__text {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-size: 16px;
   line-height: 1;
   font-weight: 500;
@@ -171,12 +165,13 @@ html, body {
 
 @media (min-width: 992px) {
   .first__text {
-    font-size: 20px;
+    font-size: 24px;
+    margin-bottom: 30px;
   }
 }
 
 .first__signature {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,7 +231,6 @@ html, body {
   .first__img {
     width: 300px;
     right: -17%;
-    display: inline-block;
   }
 }
 
@@ -244,6 +238,7 @@ html, body {
   .first__img {
     width: 400px;
     right: -20%;
+    display: inline-block;
   }
 }
 
@@ -476,11 +471,13 @@ html, body {
 .info__card-info {
   font-size: 16px;
   line-height: 1.2;
+  color: yellow;
+  font-weight: 700;
 }
 
 @media (min-width: 992px) {
   .info__card-info {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 
@@ -638,7 +635,7 @@ html, body {
 
 .info__list-item {
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 500;
   line-height: 1.2;
   margin-bottom: 5px;
 }
@@ -830,11 +827,11 @@ html, body {
   width: 100%;
 }
 
-.vip--1, .vip--2 {
+.vip--1, .vip--2, .vip--3 {
   position: relative;
 }
 
-.vip--1:after, .vip--2:after {
+.vip--1:after, .vip--2:after, .vip--3:after {
   content: "1";
   position: absolute;
   left: -15px;
@@ -856,16 +853,38 @@ html, body {
 }
 
 @media (min-width: 576px) {
-  .vip--1:after, .vip--2:after {
+  .vip--1:after, .vip--2:after, .vip--3:after {
+    content: "Шаг 1";
     left: -25px;
-    font-size: 39px;
+    font-size: 14px;
     width: 50px;
     height: 50px;
   }
 }
 
+@media (min-width: 992px) {
+  .vip--1:after, .vip--2:after, .vip--3:after {
+    left: -45px;
+    font-size: 24px;
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (min-width: 768px) {
+  .vip--1 {
+    padding-left: 60px !important;
+  }
+}
+
 .vip--2:after {
-  content: "2";
+  content: '2';
+}
+
+@media (min-width: 576px) {
+  .vip--2:after {
+    content: "Шаг 2";
+  }
 }
 
 .vip__soc {
@@ -874,19 +893,19 @@ html, body {
 
 .vip__title {
   font-weight: 800;
-  font-size: 22px;
+  font-size: 20px;
   text-transform: uppercase;
   line-height: 1.2;
 }
 
 @media (min-width: 992px) {
   .vip__title {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 
 .vip__title span {
-  color: #D71707;
+  color: #009529;
 }
 
 .vip__desc {
@@ -899,23 +918,177 @@ html, body {
 
 @media (min-width: 992px) {
   .vip__desc {
-    font-size: 32px;
+    font-size: 28px;
   }
+}
+
+.vip__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .vip__wrap {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.vip__counter {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .vip__counter {
+    width: 35%;
+  }
+}
+
+@media (min-width: 992px) {
+  .vip__counter {
+    padding: 15px 30px;
+  }
+}
+
+.vip__counter-number {
+  opacity: 0;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  background: rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 0 30px;
+  margin-top: 10px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 576px) {
+  .vip__counter-number {
+    font-size: 28px;
+    letter-spacing: 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .vip__counter-number {
+    font-size: 34px;
+    letter-spacing: 8px;
+    width: initial;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .vip__counter-number {
+    font-size: 45px;
+    letter-spacing: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .vip__counter-number {
+    font-size: 65px;
+    letter-spacing: 15px;
+  }
+}
+
+.vip__counter-text {
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.vip__counter-count {
+  margin-top: 15px;
+}
+
+.vip__counter-count span {
+  font-size: 65px;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 0 5px;
+  margin-top: -5px;
+  line-height: 1;
+  height: 100%;
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.vip__counter-count span:last-child {
+  margin-right: 0;
 }
 
 .vip__pretitle {
   font-size: 18px;
   text-transform: uppercase;
+  font-weight: 700;
+  color: #009529;
+  border: 1px dashed #009529;
+  border-radius: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px 3px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .vip__pretitle {
+    padding: 0 74px;
+    width: initial;
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 992px) {
   .vip__pretitle {
     font-size: 36px;
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .vip__pretitle {
+    padding: 0 70px;
   }
 }
 
 .vip__pretitle b {
   font-weight: 700;
+  color: #000;
+  padding-left: 7px;
 }
 
 .vip__row {
@@ -997,7 +1170,7 @@ html, body {
 }
 
 .vip__text {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
@@ -1094,7 +1267,7 @@ html, body {
 
 .vip__btn {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 13px;
   color: #fff;
   padding: 6px 10px;
   background-color: #FE1D3D;
@@ -1106,6 +1279,30 @@ html, body {
   position: relative;
   -webkit-transition: .3s;
   transition: .3s;
+  position: relative;
+}
+
+.vip__btn.vip--3:after {
+  color: #000;
+  content: '3';
+  top: calc(50% - 15px);
+  left: -35px;
+}
+
+@media (min-width: 576px) {
+  .vip__btn.vip--3:after {
+    content: "Шаг 3";
+    top: calc(50% - 25px);
+    left: -70px;
+  }
+}
+
+@media (min-width: 992px) {
+  .vip__btn.vip--3:after {
+    content: "Шаг 3";
+    top: calc(50% - 45px);
+    left: -120px;
+  }
 }
 
 .vip__btn:hover {
@@ -1118,6 +1315,7 @@ html, body {
   .vip__btn {
     letter-spacing: 1px;
     font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -1229,6 +1427,11 @@ html, body {
   .transfer__table td {
     padding: 80px 15px;
   }
+}
+
+.footer__privacy {
+  text-decoration: underline;
+  font-size: 14px;
 }
 
 .footer__desc {
@@ -1505,6 +1708,8 @@ html, body {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1559,9 +1764,15 @@ html, body {
 }
 
 .checkbox a {
-  padding-left: 5px;
   color: #000;
   text-decoration: underline;
+  padding-left: 18px;
+}
+
+@media (min-width: 576px) {
+  .checkbox a {
+    padding-left: 25px;
+  }
 }
 
 .checkbox a:hover {
