@@ -88,22 +88,36 @@ html, body {
         background-size: cover;
     }
 
+    &--gift {
+        background: #F6F6F6;
+    }
+
     &--bi2 {
-        background-image: url('../img/bi2_bg2.png');
+        // background-image: url('../img/bi2_bg2.png'), linear-gradient(180deg, #3E4191 0%, #000000 100%);
+        background-image: linear-gradient(180deg, #3E4191 0%, #000000 100%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         background-repeat: no-repeat;
-        background-position-x: right;
-        background-position-y: center;
+        background-position-x: center;
+        background-position-y: top;
         background-size: auto;
         padding-bottom: 30px;
 
+        @media (min-width: 576px) {
+            background-image: url('../img/bi2__bg.png'), linear-gradient(180deg, #3E4191 0%, #000000 100%);
+            background-position-y: 121%, top;
+            background-position-x: 62%, center;
+        }
+
+        @media (min-width: 768px) {
+            background-position-y: 130%, top;
+        }
+
         @media (min-width: 992px) {
-            background-size: auto;
             padding-bottom: 0;
-            background-position-x: center;
         }
 
         @media (min-width: 1200px) {
-            background-size: auto;
+            background-position-y: 125%, top;
         }
     }
 
@@ -112,6 +126,16 @@ html, body {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    &--step {
+        background: linear-gradient(180deg, #FBF5ED 0%, #FFFFFF 100%);
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        @media (min-width: 768px) {
+            padding-top: 50px;
+        }
     }
 }
 
@@ -286,20 +310,20 @@ html, body {
 
 .info {
 
-    &__card {
-        background-color: #009529;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 25px;
+    &__warning {
         color: #fff;
-        padding: 15px;
-        position: relative;
-        margin-bottom: 30px;
-        margin-top: 30px;
+        font-size: 18px;
+        margin-bottom: 10px;
 
         @media (min-width: 992px) {
-            margin-bottom: 40px;
-            padding: 35px;
+            font-size: 21px;
         }
+    }
+
+    &__card {
+        color: #fff;
+        position: relative;
+        margin-bottom: 25px;
 
         &-title {
             font-size: 22px;
@@ -309,6 +333,7 @@ html, body {
 
             @media (min-width: 992px) {
                 font-size: 36px;
+                margin-bottom: 25px;
             }
         }
 
@@ -319,7 +344,7 @@ html, body {
             line-height: 1.2;
 
             @media (min-width: 992px) {
-                font-size: 22px;
+                font-size: 20px;
                 width: 80%;
                 margin-bottom: 30px;
             }
@@ -334,19 +359,19 @@ html, body {
 
             @media (min-width: 768px) {
                 position: absolute;
-                right: 15px;
-                bottom: 140px;
+                right: -20px;
+                bottom: 100px;
             }
 
             @media (min-width: 992px) {
                 max-width: initial;
                 width: initial;
-                right: 30px;
-                bottom: 80px;
+                right: -30px;
+                bottom: 20px;
             }
 
             @media (min-width: 1200px) {
-                bottom: 50px;
+                bottom: 15px;
             }
         }
 
@@ -365,10 +390,10 @@ html, body {
                 display: block;
                 font-size: 16px;
                 margin-bottom: 30px;
+                margin-top: 10px;
 
                 @media (min-width: 992px) {
                     font-size: 18px;
-                    margin-bottom: 40px;
                 }
             }
 
@@ -379,7 +404,7 @@ html, body {
             & li {
                 font-size: 16px;
                 line-height: 1.2;
-                margin-bottom: 10px;
+                margin-bottom: 5px;
 
                 @media (min-width: 992px) {
                     font-size: 18px;
@@ -392,9 +417,11 @@ html, body {
             line-height: 1.2;
             color: yellow;
             font-weight: 700;
+            margin-bottom: 15px;
 
             @media (min-width: 992px) {
-                font-size: 22px;
+                font-size: 20px;
+                margin-bottom: 30px;
             }
         }
     }
@@ -662,6 +689,18 @@ html, body {
 }
 
 .vip {
+
+    &__duration {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: #ff0000;
+        text-align: center;
+
+        @media (min-width: 576px) {
+            font-size: 26px;
+        }
+    }
 
     &__codes {
         display: flex;
@@ -1265,11 +1304,35 @@ html, body {
     top: 30px !important;
     left: calc(50% - 150px) !important;
     text-align: center;
+    overflow-y: scroll;
+    max-height: calc(100% - 60px);
+
+    &__delete {
+        margin-bottom: 10px;
+        color: #ff0000;
+        text-align: right;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    &__line {
+        margin-bottom: 20px;
+        border-color: #FF0000;
+    }
+
+    &__add {
+        color: #ff0000;
+        font-weight: 700;
+        margin-bottom: 20px;
+        cursor: pointer;
+        line-height: 1.2;
+    }
 
     @media (min-width: 576px) {
         width: 480px;
         top: 50px !important;
         left: calc(50% - 240px) !important;
+        max-height: calc(100% - 100px);
     }
 
     &__wrapper {
@@ -1632,4 +1695,148 @@ html, body {
             right: 100px;
         }
     }
+}
+
+.step {
+    margin-bottom: 30px;
+
+    &__info {
+        font-size: 14px;
+        font-weight: 900;
+        text-align: center;
+        margin-top: 30px;
+        line-height: 1;
+
+        @media (min-width: 576px) {
+            font-size: 18px;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 1.2;
+
+        @media (min-width: 768px) {
+            font-size: 26px;
+        }
+    }
+
+    &__wrap {
+        background-color: #FAEBDB;
+        padding: 50px 10px 30px 10px;
+        position: relative;
+
+        @media (min-width: 576px) {
+            padding: 60px 10px 20px 10px;
+            height: 170px;
+        }
+
+        @media (min-width: 768px) {
+            padding: 80px 10px 20px 10px;
+            height: 195px;
+        }
+
+        @media (min-width: 992px) {
+            padding: 110px 10px 50px 10px;
+            height: 270px;
+        }
+
+        @media (min-width: 1200px) {
+            height: 300px;
+        }
+    }
+
+    &__num {
+        font-size: 35px;
+        font-weight: 900;
+        position: absolute;
+        left: 10px;
+        top: 5px;
+        line-height: 1;
+
+        @media (min-width: 576px) {
+            font-size: 40px;
+        }
+
+        @media (min-width: 768px) {
+            font-size: 60px;
+            left: 15px;
+        }
+
+        @media (min-width: 992px) {
+            font-size: 85px;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.1;
+        text-align: center;
+
+        @media (min-width: 576px) {
+            font-size: 14px;
+        }
+
+        @media (min-width: 768px) {
+            font-size: 18px;
+        }
+
+        @media (min-width: 992px) {
+            font-size: 26px;
+        }
+    }
+
+    &__img {
+        margin-bottom: 10px;
+        width: 100%;
+        object-fit: contain;
+        max-width: 347px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (min-width: 576px) {
+            height: 99px;
+        }
+
+        @media (min-width: 768px) {
+            height: 139px;
+        }
+
+        @media (min-width: 992px) {
+            height: 192px;
+            margin-bottom: 30px;
+        }
+        
+        @media (min-width: 1200px) {
+            height: 230px;
+        }
+    }
+}
+
+.ask {
+    line-height: 1.2;
+
+    &--green {
+        color: #009529;
+        font-weight: 600;
+    }
+
+    &__title {
+        font-size: 20px;
+        color: #009529;
+        text-align: center;
+        font-weight: 700;
+
+        @media (min-width: 768px) {
+            font-size: 28px;
+        }
+    }
+}
+
+#js-new-person--2, #js-new-person--3, #js-new-person--4, #js-new-person--5 {
+    display: none;
 }
