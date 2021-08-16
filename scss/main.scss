@@ -137,6 +137,11 @@ html, body {
             padding-top: 50px;
         }
     }
+
+    &--speak {
+        background-color: #EDEDED;
+        padding: 30px 0;
+    }
 }
 
 .first {
@@ -1839,4 +1844,123 @@ html, body {
 
 #js-new-person--2, #js-new-person--3, #js-new-person--4, #js-new-person--5 {
     display: none;
+}
+
+.speak {
+
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 15px;
+        line-height: 1.1;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            font-size: 26px;
+            margin-bottom: 26px;
+        }
+
+        @media (min-width: 992px) {
+            font-size: 36px;
+        }
+    }
+
+    &__left {
+        text-align: center;
+        justify-content: center;
+
+        & img {
+
+        }
+
+        & div {
+            background-color: #FF0000;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 10px;
+            color: #fff;
+            margin-top: 15px;
+            width: fit-content;
+        }
+    }
+
+    &__text {
+
+        & p {
+            padding: 7px 10px;
+            border: 2px dashed #FF0000;
+            border-radius: 15px;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            font-size: 16px;
+
+            @media (min-width: 992px) {
+                margin-bottom: 30px;
+            }
+
+            @media (min-width: 1200px) {
+                font-size: 18px;
+                padding: 10px 20px;
+            }
+        }
+
+        & .vip__btn {
+            display: block;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__right {
+        display: flex;
+        justify-content: center;
+
+        & img {
+            height: 160px;
+            object-fit: cover;
+
+            @media (min-width: 420px) {
+                height: 190px;
+            }
+        }
+
+
+        @media (min-width: 992px) {
+            display: block;
+
+            & img {
+                height: initial;
+            }
+        }
+
+        & a > img {
+            margin-bottom: 8px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        & .speak__docs {
+            display: flex;
+            justify-content: space-between;
+
+            & a {
+                font-size: 0;
+                width: 50%;
+
+                & img {
+                    font-size: 0;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
 }
