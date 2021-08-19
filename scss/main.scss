@@ -66,6 +66,10 @@ html, body {
         padding: 30px 0;
     }
 
+    &--day {
+        background-color: #FFFAF1;
+    }
+
     &--warning {
         background: #EBEBEB;
     }
@@ -94,6 +98,10 @@ html, body {
 
     &--gift {
         background: #F6F6F6;
+    }
+
+    &--def {
+        background-color: #FFFAF1;
     }
 
     &--bi2 {
@@ -125,6 +133,11 @@ html, body {
         }
     }
 
+    &--bi2-2 {
+        background: #00364E;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
     &--vip {
         background-image: url('../img/vip__bg.jpg');
         background-position: center;
@@ -133,7 +146,7 @@ html, body {
     }
 
     &--step {
-        background: linear-gradient(180deg, #FBF5ED 0%, #FFFFFF 100%);
+        background: linear-gradient(180deg, #FAEBDB 0%, #FFFFFF 100%);
         padding-top: 30px;
         padding-bottom: 30px;
 
@@ -319,20 +332,46 @@ html, body {
 
 .info {
 
-    &__warning {
-        color: #fff;
+    &__time {
         font-size: 18px;
+        font-weight: 700;
         margin-bottom: 10px;
 
         @media (min-width: 992px) {
-            font-size: 21px;
+            font-size: 24px;
         }
+    }
+
+    &__warning {
+        color: red;
+        font-size: 16px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 1.2;
+
+        @media (min-width: 992px) {
+            font-size: 24px;
+        }
+    }
+
+    &__time {
+
     }
 
     &__card {
         color: #fff;
         position: relative;
+        padding-bottom: 0;
         margin-bottom: 25px;
+
+        @media (min-width: 768px) {
+            padding-bottom: 30px;
+        }
+
+        @media (min-width: 992px) {
+            padding-bottom: 50px;
+        }
 
         &-title {
             font-size: 22px;
@@ -435,8 +474,18 @@ html, body {
         }
     }
 
+    &__doc {
+        text-decoration: underline;
+        cursor: pointer;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 30px;
+        margin-top: 15px;
+        line-height: 1.2;
+    }
+
     &__logo {
-        max-width: 250px;
+        max-width: 212px;
 
         @media (min-width: 576px) {
             max-width: 350px;
@@ -508,7 +557,7 @@ html, body {
         font-weight: 700;
         font-size: 22px;
         line-height: 1.2;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
 
         &.text-white {
             text-align: center;
@@ -519,6 +568,10 @@ html, body {
         }
 
         @media (min-width: 992px) {
+            font-size: 34px;
+        }
+
+        @media (min-width: 1200px) {
             font-size: 40px;
         }
 
@@ -1672,11 +1725,10 @@ html, body {
 
     &__info {
         font-size: 18px;
-        font-weight: 700;
-        line-height: 1;  
+        line-height: 1.2;  
 
         @media (min-width: 992px) {
-            font-size: 24px;          
+            font-size: 22px;          
         }
     }
 
@@ -1702,6 +1754,31 @@ html, body {
 
         @media (min-width: 1200px) {
             right: 100px;
+        }
+    }
+
+    &__table {
+        font-size: 14px;
+        width: 100%;
+        background-color: #fff;
+        min-width: 460px;
+
+        &-container {
+            overflow-x: auto;
+        }
+
+        & th {
+            background-color: #E5E5E5;
+            font-weight: 700;
+            border: 1px solid #828282;
+            padding: 7px 10px;
+            line-height: 1.2;
+        }
+
+        & td {
+            border: 1px solid #828282;
+            padding: 7px 10px;
+            line-height: 1.2;
         }
     }
 }
@@ -2024,5 +2101,74 @@ html, body {
         @media (min-width: 576px) {
             max-width: 150px;
         }
+    }
+}
+
+.def {
+
+    &__title {
+        color: #009529;
+        text-align: center;
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 30px;
+        line-height: 1.2;
+        
+        @media (min-width: 992px) {
+            font-size: 32px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.2;
+
+        @media (min-width: 992px) {
+            font-size: 22px;
+        }
+    }
+
+    &__btn {
+        color: #fff;
+        height: 30px;
+        box-shadow: 0px 4px 4px #FFFFFF;
+        border-radius: 10px;
+        border: none;
+        font-size: 14px;
+        padding: 0 30px;
+        cursor: pointer;
+        transition: .3s;
+        outline: none !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        &:hover {
+            opacity: .85;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        &--green {
+            background-color: #009529;
+        }
+
+        &--red {
+            background-color: #F43B45;
+        }
+    }
+
+    &__img {
+        max-width: 200px;
+        width: 100%;
+    }
+}
+
+.ask {
+
+    & span {
+        color: #009529;
     }
 }
