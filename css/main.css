@@ -78,6 +78,10 @@ html, body {
   }
 }
 
+.section--rules {
+  background-color: #5DB33A;
+}
+
 .section--day {
   background-color: #FFFAF1;
 }
@@ -2603,5 +2607,114 @@ html, body {
 
 .ask span {
   color: #009529;
+}
+
+.rules {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+  .rules {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.rules__title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .rules__title {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+.rules__item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 576px) {
+  .rules__item {
+    width: 33.3333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .rules__item {
+    min-width: 13.3333%;
+    max-width: initial;
+    margin-bottom: 0;
+  }
+}
+
+.rules__item--big {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+@media (min-width: 1200px) {
+  .rules__item--big {
+    width: 100%;
+    -webkit-box-ordinal-group: initial;
+        -ms-flex-order: initial;
+            order: initial;
+  }
+}
+
+.rules__item-img {
+  margin-bottom: 15px;
+  width: 75px;
+  height: 75px;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .rules__item-img {
+    margin-bottom: 30px;
+  }
+}
+
+.rules__item-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.rules__item-text {
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
