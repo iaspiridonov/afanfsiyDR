@@ -1,15 +1,21 @@
 
 $(document).ready(function() {
-    const swiper = new Swiper('.swiper-container', {
-        // Optional parameters
-        loop: true,
-        spaceBetween: 30,
-        autoHeight: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });   
+
+    setTimeout(function() {
+        if (document.body.clientWidth > 767) {
+            $.fancybox.open([
+                {
+                    src  : 'd.jpg',
+                }
+            ]);
+        } else {
+            $.fancybox.open([
+                {
+                    src  : 'm.jpg',
+                }
+            ]);
+        }
+    }, 3000);
 
 	$('input[name="phone"]').inputmask("+7(999)999-99-99");
 
