@@ -23,6 +23,7 @@ html, body {
   position: sticky;
   top: 0;
   z-index: 2;
+  border-bottom: 1px solid #ccc;
 }
 
 @media (min-width: 576px) {
@@ -3011,5 +3012,81 @@ html, body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.mod {
+  width: 300px !important;
+  padding: 15px !important;
+}
+
+@media (min-width: 768px) {
+  .mod {
+    width: 600px !important;
+    padding: 44px !important;
+  }
+}
+
+.mod h2 {
+  color: #FF0000;
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+@media (min-width: 768px) {
+  .mod h2 {
+    font-size: 32px;
+  }
+}
+
+.translate {
+  width: 100%;
+  height: 250px;
+}
+
+@media (min-width: 576px) {
+  .translate {
+    height: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  .translate {
+    height: 500px;
+  }
+}
+
+@media (min-width: 992px) {
+  .translate {
+    height: 600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .translate {
+    height: 700px;
+  }
+}
+
+.translate__title {
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+  .translate__title {
+    font-size: 32px;
+  }
+}
+
+.translate__button {
+  font-weight: 700;
+}
+
+#translate1 {
+  width: 90%;
+  height: 90%;
 }
 /*# sourceMappingURL=main.css.map */

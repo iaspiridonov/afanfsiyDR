@@ -86,6 +86,22 @@
         </div>
     </header>
 
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="translate__title">Онлайн-трансляции фестиваля «МакЛарин за Родину»</h1>
+                </div>
+                <div class="col-12 mb-3">
+                    <iframe class="translate" src="https://ru.cloud.trassir.com/embed/UyF5BiKxgyBdyEh0"></iframe>
+                </div>
+                <div class="col-12">
+                    <iframe class="translate" src="https://ru.cloud.trassir.com/embed/kOKtnNTzbham90EA"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section section--first pb-0 pt-xl-5 pt-lg-3 pt-0 overflow-hidden">
         <div class="container position-relative py-4">
             <div class="row justify-content-center">
@@ -473,6 +489,17 @@
         </div>
     </div>
     <div id="mask"></div>
+
+    <!-- <div class="mod" id="hidden">
+        <h2>ВАЖНАЯ ИНФОРМАЦИЯ</h2>
+        <p>
+            Друзья, погода испортилась, что не позволит вам выполнить одно из условий входа на фестиваль - быть в фирменной футболке.
+            <br><br>
+            Поэтому мы ОТМЕНЯЕМ УСЛОВИЕ ВХОДА В ФУТБОЛКЕ. Приходите в свободной одежде, одевайтесь теплее👌🏻 Главное - билет и паспорт. А футболку оставьте дома как памятный сувенир о фестивале!
+            <br><br>
+            Увидимся 29 августа !
+        </p>
+    </div> -->
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/swiper-bundle.min.js"></script>
     <script src="/js/jquery-3.6.0.min.js"></script>

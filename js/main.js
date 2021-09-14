@@ -1,21 +1,26 @@
 
 $(document).ready(function() {
 
-    setTimeout(function() {
-        if (document.body.clientWidth > 767) {
-            $.fancybox.open([
-                {
-                    src  : 'd.jpg',
-                }
-            ]);
-        } else {
-            $.fancybox.open([
-                {
-                    src  : 'm.jpg',
-                }
-            ]);
-        }
-    }, 3000);
+    // $.fancybox.open([
+    //     {
+    //         src  : '#hidden',
+    //     }
+    // ]);
+
+    $('#open_translate1').click(function (e) { 
+        e.preventDefault();
+        $.fancybox.open([
+            {
+                src  : '#translate1',
+            }
+        ]);
+    });
+
+    // $.fancybox.open([
+    //         {
+    //             src  : '#translate1',
+    //         }
+    //     ]);
 
 	$('input[name="phone"]').inputmask("+7(999)999-99-99");
 
